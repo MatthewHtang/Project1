@@ -2,10 +2,6 @@
 
 **Project:** Reservation System\
 **Course:** CSCE 2110: Foundations of Data Structures\
-**Team:** [Matthew Haling Htang]\
-          [Matthew Haling Htang]\
-          [Matthew Haling Htang]\
-
 **Last Updated:** 09-05-2026
 
 ---
