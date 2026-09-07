@@ -9,7 +9,7 @@
 ## Summary Table
 | Team Member | Component(s) | Specific Tasks Completed | Testing/Debugging | GitHub Contributions |
 |-------------|--------------|--------------------------|-------------------|----------------------|
-| Matthew | not decided yet | None | None | None
+| Matthew | ReservationManager | None | None | None
 | Matthew | not decided yet | None | None | None
 | Matthew | not decided yet | None | None | None
 
@@ -18,7 +18,8 @@
 # Detailed Work Log
 
 ## Matthew
-- **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+- **09-07-2026** — Added main menu to the program. [`f92d8c935d8da24139412f8815dc8150ea99eeca`](https://github.com/MatthewHtang/Project1/commit/f92d8c935d8da24139412f8815dc8150ea99eeca)
+
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 
