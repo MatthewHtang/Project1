@@ -20,7 +20,7 @@
 ## Matthew
 - **09-07-2026** — Added main menu to the program. [`f92d8c9`](https://github.com/MatthewHtang/Project1/commit/f92d8c935d8da24139412f8815dc8150ea99eeca)
 
-- **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+- **09-08-2026** — Enhance main menu display and add new header/source files for resource management. [`29cea2b8eba540fd980db74aa61b58d9d0b354f3`](https://github.com/MatthewHtang/Project1/commit/29cea2b8eba540fd980db74aa61b58d9d0b354f3)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 
 ## Matthew
