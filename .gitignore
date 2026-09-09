@@ -1,0 +1,6 @@
+*.o
+*.out
+reservation
+build/
+.vscode/
+.DS_Store
