@@ -24,6 +24,8 @@
 
 - **09-09-2026** — Add ReservationList class with Node structure (to be Continue)and update .gitignore. [`da005e0`](https://github.com/MatthewHtang/Project1/commit/da005e090b73ac5d7889159e91c28fa6ea068930)
 
+- **09-09-2026** — Refactor ReservationList class and Node structure for clarity and organization. [`f52ea94`](https://github.com/MatthewHtang/Project1/commit/f52ea9437e807797425f2af2572b4a4bd30a09a5)
+
 ## Sankalp
 - **09-08-2026** — Testing from Sankalp Branch. [`780e914`](https://github.com/MatthewHtang/Project1/commit/780e914e2da494096fc1eb2a406ec09851d14e21)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
