@@ -28,7 +28,7 @@
 
 ## Sankalp
 - **09-08-2026** — Testing from Sankalp Branch. [`780e914`](https://github.com/MatthewHtang/Project1/commit/780e914e2da494096fc1eb2a406ec09851d14e21)
-- **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+- **09-10-2026** — Created the Resource class header file (Resource.h) and added variables for resource ID, name, type, and availability. Also added  constructor functions. [`a1b2c3d`](../../commit/a1b2c3d)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 
 ## Alka
