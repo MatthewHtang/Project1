@@ -1,36 +1,32 @@
-//First we need a header guards to avoid compiler error
+// Incldue header guards to avoid compiler error
 #ifndef RESERVATIONLIST_H
 #define RESERVATIONLIST_H
 
 #include "Reservation.h"
 
- /**
-  * ReservationList
-  * 
-  * Singly linked list will be use to store all the active reservations
-  * Insertion will begin from the head
-  * 
-  * Since we don't have anything from the Reservation yet, 
-  * let's just assume that the Reservation provide
-  * - default constructor
-  * - int getReservationId () const
-  * - void display() const
-  *
-  * *This is subject to change depending on how Reservation is structured 
-  */
+// A Node is one link in the chain.
+// It holds the reservation, and the address of the next link.
 
-  class ReservationList{
-    private:
-    struct Node {    //Create a Node
-        Reservation data;   //Each Node contains a reservation
-        Node* next;     //Next pointer
+struct Node{    //Create Node
+  Reservation data;   //Store data and the reservation addrs
+  Node* next;   //Next pointer
+};
 
-        //Constructor for Node
-        Node(const Reservation& r) : data(r), next(nullptr){};
+class ReservationList {
 
+  private:
+  Node* head;   //Head point to the first Node, (if empty, nullptr )
+  int count;   // Keep track of how many reservations are currently in the list
 
-    };
+  public:
+  ReservationList();    //Constructor - runs automatically when the list is created
+  ~ReservationList();   // Destructor - runs automatically when the list is destroyed
 
-  };
-
+  void insert(Reservation r);   //This function adds reservation to the list
+  bool remove(int reservationId);   //This function removes a reservation based on its ID
+  Reservation* findById(int reservationId);   //This function searches the linked list for a reservation
+  void displayAll();    //This function will print every reservation
+  bool isEmpty();   //This checks whether the list has anything inside it
+  int getCount();   //  To get the number of reservation
+};
 #endif
