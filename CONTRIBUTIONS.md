@@ -9,9 +9,9 @@
 ## Summary Table
 | Team Member | Component(s) | Specific Tasks Completed | Testing/Debugging | GitHub Contributions |
 |-------------|--------------|--------------------------|-------------------|----------------------|
-| Matthew | ReservationList.h<br>• ReservationList.cpp | None | None | None |
-| Sankalp | Resource.h<br>• Resource.cpp | None | None | None
+| Matthew | Reservation.h<br>• Reservation.cpp | None | None | None |
 | Matthew | not decided yet | None | None | None
+| Alka |Resesrvation.h<br>• Reservation.cpp| None | None | None
 
 ---
 
@@ -31,8 +31,8 @@
 - **09-10-2026** — Created the Resource class header file (Resource.h) and added variables for resource ID, name, type, and availability. Also added  constructor functions. [`a1b2c3d`](../../commit/a1b2c3d)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 
-## Matthew
-- **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+## Alka
+- **09-10-2026** — Initial commit. [`a1b2c3d`](../../commit/a1b2c3d)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 
