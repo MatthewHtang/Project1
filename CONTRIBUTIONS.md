@@ -26,6 +26,10 @@
 
 - **09-09-2026** — Refactor ReservationList class and Node structure for clarity and organization. [`f52ea94`](https://github.com/MatthewHtang/Project1/commit/f52ea9437e807797425f2af2572b4a4bd30a09a5)
 
+- **09-11-2026** — Fix memory management in ReservationList class and correct insert method implementation
+[`281c103`](https://github.com/MatthewHtang/Project1/commit/281c103425c92075b0ab52150eba4e059d90f3a2)
+
+
 ## Sankalp
 - **09-08-2026** — Testing from Sankalp Branch. [`780e914`](https://github.com/MatthewHtang/Project1/commit/780e914e2da494096fc1eb2a406ec09851d14e21)
 - **09-10-2026** — Created the Resource class header file (Resource.h) and added variables for resource ID, name, type, and availability. Also added  constructor functions. [`a1b2c3d`](../../commit/a1b2c3d)
