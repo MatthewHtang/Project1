@@ -29,6 +29,9 @@
 - **09-11-2026** — Fix memory management in ReservationList class and correct insert method implementation
 [`281c103`](https://github.com/MatthewHtang/Project1/commit/281c103425c92075b0ab52150eba4e059d90f3a2)
 
+- **09-12-2026** — Refactor ReservationList class: improve comments, implement remove method, and fix insert logic
+[`6fe25e4`](https://github.com/MatthewHtang/Project1/commit/6fe25e4bc5409dab8ae4094e4053bb6318bd05c7)
+
 
 ## Sankalp
 - **09-08-2026** — Testing from Sankalp Branch. [`780e914`](https://github.com/MatthewHtang/Project1/commit/780e914e2da494096fc1eb2a406ec09851d14e21)
