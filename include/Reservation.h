@@ -8,17 +8,17 @@ private:
     int reservationId;     
     int studentId;
     std::string studentName;
-    int resourceId;
+    std::string resourceId;
     std::string reservationDate;
 
 public:
-    
-    Reservation(int reservationId, int studentId, std::string studentName, int resourceId, std::string reservationDate);
+    Reservation(); // We need default constructor
+    Reservation(int reservationId, int studentId, std::string studentName, std::string resourceId, std::string reservationDate);
 
     int getReservationId() const;
     int getStudentId() const;
     std::string getStudentName() const;
-    int getResourceId() const;
+    std::string getResourceId() const;
     std::string getReservationDate() const;
 
     void display() const; 
