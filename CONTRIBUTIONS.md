@@ -32,16 +32,24 @@
 - **09-12-2026** — Refactor ReservationList class: improve comments, implement remove method, and fix insert logic
 [`6fe25e4`](https://github.com/MatthewHtang/Project1/commit/6fe25e4bc5409dab8ae4094e4053bb6318bd05c7)
 
+- **09-13-2026** — Refactor Reservation class: change resourceId type to string and update constructor and getter methods. And finally wrapped up ReservationList.cpp (Review might require later)[`43276b4`](https://github.com/MatthewHtang/Project1/commit/43276b4ab886aa4c48d5f433fe904030e961a4cb)
+
+---
+
 
 ## Sankalp
 - **09-08-2026** — Testing from Sankalp Branch. [`780e914`](https://github.com/MatthewHtang/Project1/commit/780e914e2da494096fc1eb2a406ec09851d14e21)
 - **09-10-2026** — Created the Resource class header file (Resource.h) and added variables for resource ID, name, type, and availability. Also added  constructor functions. [`a1b2c3d`](../../commit/a1b2c3d)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 
+---
+
 ## Alka
 - **09-10-2026** — Initial commit. [`a1b2c3d`](../../commit/a1b2c3d)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+
+---
 
 - Repository: https://github.com/MatthewHtang/Project1.git
 
