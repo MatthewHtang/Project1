@@ -11,7 +11,7 @@
 |-------------|--------------|--------------------------|-------------------|----------------------|
 | Matthew | •ReservationList.h<br>•ReservationList.cpp | None | None | None |
 | Matthew | not decided yet | None | None | None
-| Alka |Resesrvation.h<br>• Reservation.cpp| None | None | None
+| Alka |•Resesrvation.h<br>•Reservation.cpp| None | None | None
 
 ---
 
