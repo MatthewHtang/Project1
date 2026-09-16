@@ -9,7 +9,7 @@
 ## Summary Table
 | Team Member | Component(s) | Specific Tasks Completed | Testing/Debugging | GitHub Contributions |
 |-------------|--------------|--------------------------|-------------------|----------------------|
-| Matthew | •ReservationList.h<br>•ReservationList.cpp | None | None | None |
+| Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp | None | None | None |
 | Matthew | not decided yet | None | None | None
 | Alka |•Resesrvation.h<br>•Reservation.cpp| None | None | None
 
@@ -33,6 +33,8 @@
 [`6fe25e4`](https://github.com/MatthewHtang/Project1/commit/6fe25e4bc5409dab8ae4094e4053bb6318bd05c7)
 
 - **09-13-2026** — Refactor Reservation class: change resourceId type to string and update constructor and getter methods. And finally wrapped up ReservationList.cpp (Review might require later)[`43276b4`](https://github.com/MatthewHtang/Project1/commit/43276b4ab886aa4c48d5f433fe904030e961a4cb)
+
+- **09-15-2026** — Implement WaitingList.h and WaitingList.cpp's class with enqueue. (Dequeue methods, not finish yet- to be continue)[`f33b9d3`](https://github.com/MatthewHtang/Project1/commit/f33b9d3442a239c80d5f100b901ff5a779165bff)
 
 ---
 
