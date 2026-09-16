@@ -8,7 +8,7 @@ using namespace std;
  * 
  * Queue : Front and end pointers
  * Constructor: Front and end pointers pointing nullptr
- * Functions: Enqueue, Dequeue, Peek front, isEmpty, Display
+ * Functions: Enqueue, Dequeue, Peek front, isEmpty, Display, getCount
  * 
  */
 
@@ -75,6 +75,127 @@ using namespace std;
 
   /**
   * Dequeue
+  * 
+  * Remove the student from the front of the line
+  * 
+  * Case01: if nobody is waiting, then just return false
+  * This is what we are going to do:
+  *     * First declare the first node as 'nodeToDelete'
+  *     * Save the two data into a bucket before deleting
+  *     * Change the front pointer to point the next node
+  *     * Now our front and end pointers pointing
+  *       towards the second Node. Now what if we also dequeue 
+  *       the second Node, front pointer will point to nullptr but
+  *       what about our end pointer?(We need to reset the pointers when
+  *       the front pointer become nullptr)
+  *     * delete the Node
+  *     * update the counter
+  *     * return true
+  *
   */
+
+ bool WaitingList::dequeue(int &studentId, string &studentName){
+
+    // Case01: If no one is waiting
+    if (front == nullptr){
+        return false;
+    }
+
+    // This is like putting a sticky notes on the first node saying, 
+    // 'This is the node we are going to delete'
+    QNode* nodeToDelete = front;
+
+    // Before we delete it, we need to hand the two data in to a bucket
+    studentId = nodeToDelete->studentId;
+    studentName = nodeToDelete->studentName;
+
+    // Now we change the front pointer to the Next Node
+    front = front->next;
+
+    // Reset the pointers when the front hits at null ptr
+    if (front == nullptr){
+        end = nullptr;
+    }
+
+    // Now everything is safe, we can delete the node we put the sticker on
+    delete nodeToDelete;
+    
+    // Update the counter
+    count--;
+
+    return true;
+ }
+
+ /**
+  * Peek Front
+  * We will be just looking at whoever is in the first line
+  */
+ bool WaitingList::peekFront(int &studentId, string &studentName){
+    
+    //If the queue is empty, just return false
+    if (front == nullptr){
+        return false;
+    }
+
+    //Put the Node data into a bucket
+    studentId = front->studentId;
+    studentName = front->studentName;
+
+    return true;
+}
+
+/**
+ * Display All the WaitingList
+ * 
+ * Walk from the front to end and print every student's data in line
+ * Case01: If no one is waiting
+ * Case02: if there is aline
+ * 
+ * What to do:
+ * 1) Put a note called current on a the front node
+ * 2) cout the student
+ * 3) set the current to current->next
+ */
+void WaitingList::displayAll() {
+    //Case01: If the line is empty
+    if(front == nullptr){
+        cout << "(There is no one in line)" << endl;
+        return;
+    }
+
+    //Case02: if there is a line
+    // Set front as current
+        QNode* current = front;
+        int position = 1; // We need to number the list
+
+        while (current != nullptr){
+            cout << " " << position << ". " 
+            << current->studentName << " (ID: " << current->studentId << ")" << endl;
+            
+            current = current->next;    // Set the current to the next node
+            position ++;    // Increment the number for the list
+        }
+}
+
+/**
+ * isEmpty
+ * Check if the WaitingList is empty or not
+ * Then return True is front pointer is null ptr and False if not
+ */
+
+ bool WaitingList::isEmpty(){
+    return front == nullptr;
+ }
+
+ /**
+  * getCount
+  * Update how many students are in the waiting list
+  */
+
+  int WaitingList::getCount(){
+    return count;
+  }
+
+
 
   
