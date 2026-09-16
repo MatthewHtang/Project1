@@ -36,6 +36,8 @@
 
 - **09-15-2026** — Implement WaitingList.h and WaitingList.cpp's class with enqueue. (Dequeue methods, not finish yet- to be continue)[`f33b9d3`](https://github.com/MatthewHtang/Project1/commit/f33b9d3442a239c80d5f100b901ff5a779165bff)
 
+- **09-16-2026** — Continue implementing the dequeue, peekFront,  displayAll, isEmpty, and getCount methods in WaitingList class[`4466870`](https://github.com/MatthewHtang/Project1/commit/44668704f2abe5342a91e86f5a7e778803da4bfa)
+
 ---
 
 
