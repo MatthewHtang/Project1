@@ -9,9 +9,9 @@
 ## Summary Table
 | Team Member | Component(s) | Specific Tasks Completed | Testing/Debugging | GitHub Contributions |
 |-------------|--------------|--------------------------|-------------------|----------------------|
-| Matthew | Reservation.h<br>• Reservation.cpp | None | None | None |
+| Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp | None | None | None |
 | Matthew | not decided yet | None | None | None
-| Alka |Resesrvation.h<br>• Reservation.cpp| None | None | None
+| Alka |•Resesrvation.h<br>•Reservation.cpp| None | None | None
 
 ---
 
@@ -26,15 +26,42 @@
 
 - **09-09-2026** — Refactor ReservationList class and Node structure for clarity and organization. [`f52ea94`](https://github.com/MatthewHtang/Project1/commit/f52ea9437e807797425f2af2572b4a4bd30a09a5)
 
+- **09-11-2026** — Fix memory management in ReservationList class and correct insert method implementation
+[`281c103`](https://github.com/MatthewHtang/Project1/commit/281c103425c92075b0ab52150eba4e059d90f3a2)
+
+- **09-12-2026** — Refactor ReservationList class: improve comments, implement remove method, and fix insert logic
+[`6fe25e4`](https://github.com/MatthewHtang/Project1/commit/6fe25e4bc5409dab8ae4094e4053bb6318bd05c7)
+
+- **09-13-2026** — Refactor Reservation class: change resourceId type to string and update constructor and getter methods. And finally wrapped up ReservationList.cpp (Review might require later)[`43276b4`](https://github.com/MatthewHtang/Project1/commit/43276b4ab886aa4c48d5f433fe904030e961a4cb)
+
+- **09-15-2026** — Implement WaitingList.h and WaitingList.cpp's class with enqueue. (Dequeue methods, not finish yet- to be continue)[`f33b9d3`](https://github.com/MatthewHtang/Project1/commit/f33b9d3442a239c80d5f100b901ff5a779165bff)
+
+- **09-16-2026** — Continue implementing the dequeue, peekFront,  displayAll, isEmpty, and getCount methods in WaitingList class[`4466870`](https://github.com/MatthewHtang/Project1/commit/44668704f2abe5342a91e86f5a7e778803da4bfa)
+
+---
+
+
 ## Sankalp
 - **09-08-2026** — Testing from Sankalp Branch. [`780e914`](https://github.com/MatthewHtang/Project1/commit/780e914e2da494096fc1eb2a406ec09851d14e21)
+- **09-10-2026** — Added the Resource class header file (Resource.h) and added variables for resource ID, name, type, and availability. Also added  constructor functions. [`a1b2c3d`](../../commit/a1b2c3d)
+- **09-13-2026** — Added resource.cpp class. [`427e3bd`](https://github.com/MatthewHtang/Project1/commit/427e3bda29c3c6157f77e9d7d318f12b8ad4bb4b)
+- **09-15-2026** — Added resourceManager class header with comments. [`
+95e32d8`](https://github.com/MatthewHtang/Project1/commit/95e32d84733e075d6410fb2b49537f22e24008f0)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+- **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+- **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+- **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+- **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+
+---
 
 ## Alka
 - **09-10-2026** — Initial commit. [`a1b2c3d`](../../commit/a1b2c3d)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+
+---
 
 - Repository: https://github.com/MatthewHtang/Project1.git
 
