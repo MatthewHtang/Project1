@@ -10,7 +10,7 @@
 | Team Member | Component(s) | Specific Tasks Completed | Testing/Debugging | GitHub Contributions |
 |-------------|--------------|--------------------------|-------------------|----------------------|
 | Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp | None | None | None |
-| Matthew | not decided yet | None | None | None
+| Sankalp | •Resource.h<br>•Resource.cpp<br>•ResourceManager.h<br>•ResourceManager.cpp<br>•CancellationHistory.cpp | None | None | None
 | Alka |•Resesrvation.h<br>•Reservation.cpp| None | None | None
 
 ---
