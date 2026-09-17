@@ -57,11 +57,10 @@
 ---
 
 ## Alka
-- **09-10-2026** — Initial commit. [`a1b2c3d`](../../commit/a1b2c3d)
-- **09-17-2026** — [Write what you did and why here]. [`335d9d3`](https://github.com/MatthewHtang/Project1/commit/137dafa71ecefaaa24baec0b3f4662f9f638a2be)
+- **09-10-2026** — Initial commit. [`335d9d3`](https://github.com/MatthewHtang/Project1/commit/335d9d31a67b271892aa9c6ae1bd517e09a8453a)
+- **09-17-2026** — [Added ReservationManager.h to define the structures and functions for resources, reservations, waiting list, and cancellation history]. [`137dafa`](https://github.com/MatthewHtang/Project1/commit/137dafa71ecefaaa24baec0b3f4662f9f638a2be)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 
----
 
 - Repository: https://github.com/MatthewHtang/Project1.git
 
