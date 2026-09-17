@@ -38,6 +38,7 @@
 
 - **09-16-2026** — Continue implementing the dequeue, peekFront,  displayAll, isEmpty, and getCount methods in WaitingList class[`4466870`](https://github.com/MatthewHtang/Project1/commit/44668704f2abe5342a91e86f5a7e778803da4bfa)
 
+- **09-17-2026** — Implement CancellationHistory class with stack functionality for managing cancelled reservations[`fe86596`](https://github.com/MatthewHtang/Project1/commit/fe86596e0e7b8626975fe20ea436c7da5c5dc114)
 ---
 
 
