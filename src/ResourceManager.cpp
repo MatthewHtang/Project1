@@ -29,7 +29,7 @@ bool ResourceManager::loadFromFile(string filename) { // Attempt to populate the
         string field; // Declare a temporary string to hold each comma-separated value
 
         getline(ss, field, ','); // Extract the first substring up to the comma character
-        int id = stoi(field); // Convert the extracted string field into an integer for the Resource ID
+        string id = field; // Convert the extracted string field into an integer for the Resource ID
 
         getline(ss, field, ','); // Extract the second substring
         string name = field; // Assign the extracted string to the Resource name
@@ -38,9 +38,9 @@ bool ResourceManager::loadFromFile(string filename) { // Attempt to populate the
         string type = field; // Assign the extracted string to the Resource type
 
         getline(ss, field, ','); // Extract the final substring
-        bool inUse = (stoi(field) == 1); // Convert the string to an integer, then evaluate as a boolean (1 = true, 0 = false)
+        bool available = (stoi(field) == 1); // Convert the string to an integer, then evaluate as a boolean (1 = true, 0 = false)
 
-        Resource r(id, name, type, inUse); // Instantiate a new Resource object using the parsed data
+        Resource r(id, name, type, available); // Instantiate a new Resource object using the parsed data
         resources.push_back(r); // Append the newly created Resource to the internal vector
     } // End of the while loop
 
@@ -72,7 +72,7 @@ void ResourceManager::displayAvailable() { // Output the details of resources th
     
     cout << "\n----- Available Resources -----" << endl; // Print the section header
     for (size_t i = 0; i < resources.size(); i++) { // Iterate through all stored resources
-        if (!resources[i].isInUse()) { // Evaluate if the current resource's in-use flag is false
+        if (resources[i].isAvailable()) { // Evaluate if the current resource's in-use flag is false
             resources[i].display(); // Output the available resource's details
             foundAny = true; // Update the flag to true since at least one resource was found
         } // End of availability evaluation
@@ -86,7 +86,7 @@ void ResourceManager::displayAvailable() { // Output the details of resources th
 //===========================================
 // Find a resource by ID
 //===========================================
-Resource* ResourceManager::findById(int resourceId) { // Search for and return a pointer to a specific Resource
+Resource* ResourceManager::findById(string resourceId) { // Search for and return a pointer to a specific Resource
     for (size_t i = 0; i < resources.size(); i++) { // Iterate through the resource vector
         if (resources[i].getResourceId() == resourceId) { // Compare the current resource's ID against the target ID
             return &resources[i]; // Return the memory address of the matching resource
@@ -98,19 +98,19 @@ Resource* ResourceManager::findById(int resourceId) { // Search for and return a
 //===========================================
 // Check if a resource exists by ID
 //===========================================
-bool ResourceManager::exists(int resourceId) { // Evaluate whether a resource with the specified ID exists in the system
+bool ResourceManager::exists(string resourceId) { // Evaluate whether a resource with the specified ID exists in the system
     return findById(resourceId) != nullptr; // Return true if findById yields a valid pointer, false otherwise
 } // End of exists method
 
 //===========================================
 // Update a resource's in-use status
 //===========================================
-bool ResourceManager::setInUse(int resourceId, bool inUse) { // Modify the availability status of a specific resource
+bool ResourceManager::setAvailable(string resourceId, bool available) { // Modify the availability status of a specific resource
     Resource* r = findById(resourceId); // Retrieve a pointer to the target resource
     if (r == nullptr) { // Verify if the returned pointer is null (resource not found)
         return false; // Terminate the function and return false to indicate the operation failed
     } // End of null validation
-    r->setInUse(inUse); // Invoke the setter method on the valid resource pointer
+    r->setAvailable(available); // Invoke the setter method on the valid resource pointer
     return true; // Return true to indicate the update was successfully applied
 } // End of setInUse method
 

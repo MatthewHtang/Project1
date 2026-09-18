@@ -18,9 +18,9 @@ public:
     void displayAll();                  // displays all resources
     void displayAvailable();            // displays resources that are available (not in use)
 
-    Resource* findById(int resourceId); // finds a reosurce by its ID
-    bool exists(int resourceId);        // checks if the resource ID exists in the resources vector
-    bool setInUse(int resourceId, bool inUse);     // changes the resouce's status
+    Resource* findById(string resourceId); // finds a reosurce by its ID
+    bool exists(string resourceId);        // checks if the resource ID exists in the resources vector
+    bool setAvailable(string resourceId, bool inUse);     // changes the resouce's status
 
     int getCount();                     // returns the number of resources in the resources vector
     bool isEmpty();                     // checks if the resources vector is empty
