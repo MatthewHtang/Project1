@@ -9,7 +9,7 @@
 ## Summary Table
 | Team Member | Component(s) | Specific Tasks Completed | Testing/Debugging | GitHub Contributions |
 |-------------|--------------|--------------------------|-------------------|----------------------|
-| Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp | None | None | None |
+| Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp<br>•main.cpp | None | None | None |
 | Sankalp | •Resource.h<br>•Resource.cpp<br>•ResourceManager.h<br>•ResourceManager.cpp<br>•CancellationHistory.cpp | None | None | None
 | Alka |•Resesrvation.h<br>•Reservation.cpp<br>•ReservationManager.cpp<br>ReservationManager.h| None | None | None
 
@@ -42,6 +42,9 @@
 
 - **09-17-2026** — Change Resource class to use string for resourceId and rename availability status
 [`752db98`](https://github.com/MatthewHtang/Project1/commit/752db987c692f2a5b3fd5422b0137d771c99e360)
+
+- **09-17-2026** — Changed some of the data types and name from Reseource Manager.h/.cpp
+[`d822958`](https://github.com/MatthewHtang/Project1/commit/d822958969eb6951b39bf6f0fe8606ea808ba51c)
 ---
 
 
