@@ -45,6 +45,9 @@
 
 - **09-17-2026** — Changed some of the data types and name from Reseource Manager.h/.cpp
 [`d822958`](https://github.com/MatthewHtang/Project1/commit/d822958969eb6951b39bf6f0fe8606ea808ba51c)
+
+- **09-17-2026** — implement a method to flushes the pipe and case 1 in main.cpp
+[`34794e1`](https://github.com/MatthewHtang/Project1/commit/34794e1fddb0406d2b5009e6afff3a65839ed61b)
 ---
 
 
