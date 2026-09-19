@@ -6,23 +6,23 @@ using namespace std;
 
 // Default constructor
 Resource :: Resource() {
-    resourceId = 0;
+    resourceId = "";
     resourceName = "";
     resourceType = "";
-    inUse = false;
+    available = true;
 
 } 
 
 // Main constructor with resource information
-Resource :: Resource(int resourceId, string resourceName, string resourceType, bool inUse) {
+Resource :: Resource(string resourceId, string resourceName, string resourceType, bool available) {
     this->resourceId = resourceId;
     this->resourceName = resourceName;
     this->resourceType = resourceType;
-    this->inUse = inUse;
+    this->available = available;
 }
 
 // Returns the resource ID
-int Resource :: getResourceId() const {
+string Resource :: getResourceId() const {
     return resourceId;
 }
 
@@ -37,13 +37,13 @@ string Resource :: getResourceType() const {
 }
 
 // Returns the current status of the resource
-bool Resource :: isInUse() const {
-    return inUse;
+bool Resource :: isAvailable() const {
+    return available;
 }
 
 // Changes the resource status
-void Resource :: setInUse(bool inUse) {
-    this->inUse = inUse;
+void Resource :: setAvailable(bool available) {
+    this->available = available;
 }
 
 // Displayes the resource information
@@ -51,7 +51,7 @@ void Resource :: display() const {
     cout << "ID: " << resourceId
          << " | Name: " << resourceName
          << " | Type: " << resourceType
-         << " | Status: " << (inUse ? "In Use" : "Available") 
+         << " | Status: " << (available ? "Available" : "In Use") 
         << endl;
 
 }

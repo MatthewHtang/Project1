@@ -9,9 +9,9 @@
 ## Summary Table
 | Team Member | Component(s) | Specific Tasks Completed | Testing/Debugging | GitHub Contributions |
 |-------------|--------------|--------------------------|-------------------|----------------------|
-| Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp | None | None | None |
-| Sankalp | •Resource.h<br>•Resource.cpp<br>•ResourceManager.h<br>•ResourceManager.cpp<br>•CancellationHistory.cpp | None | None | None
-| Alka |•Resesrvation.h<br>•Reservation.cpp| None | None | None
+| Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp<br>•main.cpp<br>•CancellationHistory.cpp | None | None | None |
+| Sankalp | •Resource.h<br>•Resource.cpp<br>•ResourceManager.h<br>•ResourceManager.cpp| None | None | None
+| Alka |•Resesrvation.h<br>•Reservation.cpp<br>•ReservationManager.cpp<br>•ReservationManager.h| None | None | None
 
 ---
 
@@ -38,6 +38,19 @@
 
 - **09-16-2026** — Continue implementing the dequeue, peekFront,  displayAll, isEmpty, and getCount methods in WaitingList class[`4466870`](https://github.com/MatthewHtang/Project1/commit/44668704f2abe5342a91e86f5a7e778803da4bfa)
 
+- **09-17-2026** — Implement CancellationHistory class with stack functionality for managing cancelled reservations[`fe86596`](https://github.com/MatthewHtang/Project1/commit/fe86596e0e7b8626975fe20ea436c7da5c5dc114)
+
+- **09-17-2026** — Change Resource class to use string for resourceId and rename availability status
+[`752db98`](https://github.com/MatthewHtang/Project1/commit/752db987c692f2a5b3fd5422b0137d771c99e360)
+
+- **09-17-2026** — Changed some of the data types and name from Reseource Manager.h/.cpp
+[`d822958`](https://github.com/MatthewHtang/Project1/commit/d822958969eb6951b39bf6f0fe8606ea808ba51c)
+
+- **09-17-2026** — implement a method to flushes the pipe and case 1 in main.cpp
+[`34794e1`](https://github.com/MatthewHtang/Project1/commit/34794e1fddb0406d2b5009e6afff3a65839ed61b)
+
+- **09-18-2026** — Refactor main.cpp: Remove ResourceManager instantiation and clean up input handling
+[`6d431e8`](https://github.com/MatthewHtang/Project1/commit/6d431e85ca79d5133b8619fce893861f6530541a)
 ---
 
 
@@ -57,11 +70,10 @@
 ---
 
 ## Alka
-- **09-10-2026** — Initial commit. [`a1b2c3d`](../../commit/a1b2c3d)
-- **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+- **09-10-2026** — Initial commit. [`335d9d3`](https://github.com/MatthewHtang/Project1/commit/335d9d31a67b271892aa9c6ae1bd517e09a8453a)
+- **09-17-2026** — [Added ReservationManager.h to define the structures and functions for resources, reservations, waiting list, and cancellation history]. [`137dafa`](https://github.com/MatthewHtang/Project1/commit/137dafa71ecefaaa24baec0b3f4662f9f638a2be)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 
----
 
 - Repository: https://github.com/MatthewHtang/Project1.git
 
