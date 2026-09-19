@@ -51,6 +51,9 @@
 
 - **09-18-2026** — Refactor main.cpp: Remove ResourceManager instantiation and clean up input handling
 [`6d431e8`](https://github.com/MatthewHtang/Project1/commit/6d431e85ca79d5133b8619fce893861f6530541a)
+
+- **09-19-2026** — Update complexity analysis and fix typos in WaitingList implementation; add tempCodeRunnerFile.h
+[`bf7ff41`](https://github.com/MatthewHtang/Project1/commit/bf7ff4158c40f52bf50d6eaa911f57f569f0b199)
 ---
 
 
