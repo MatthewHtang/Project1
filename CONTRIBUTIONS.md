@@ -48,6 +48,9 @@
 
 - **09-17-2026** — implement a method to flushes the pipe and case 1 in main.cpp
 [`34794e1`](https://github.com/MatthewHtang/Project1/commit/34794e1fddb0406d2b5009e6afff3a65839ed61b)
+
+- **09-18-2026** — Refactor main.cpp: Remove ResourceManager instantiation and clean up input handling
+[`6d431e8`](https://github.com/MatthewHtang/Project1/commit/6d431e85ca79d5133b8619fce893861f6530541a)
 ---
 
 
