@@ -47,7 +47,7 @@
 - **09-13-2026** — Added resource.cpp class. [`427e3bd`](https://github.com/MatthewHtang/Project1/commit/427e3bda29c3c6157f77e9d7d318f12b8ad4bb4b)
 - **09-15-2026** — Added resourceManager class header with comments. [`
 95e32d8`](https://github.com/MatthewHtang/Project1/commit/95e32d84733e075d6410fb2b49537f22e24008f0)
-- **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+- **09-17-2026** — Added resourceManager.cpp, reservation.txt, resource.txt files in the github. [`01cbf9c`](https://github.com/MatthewHtang/Project1/commit/01cbf9c4603dc5af269986cdc1387e9287f49a4c)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
 - **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
