@@ -1,96 +1,65 @@
 #ifndef RESERVATION_MANAGER_H
 #define RESERVATION_MANAGER_H
- 
-#include <string>
-#include "Reservation.h"
+#include <string>// allows us to use string for storing data
+#include <map>//allows us to use map, a map stores information using a key
+//These are other files and classes used by reservationmanager
+#include "Reservation.h"// stores information about one reservation
+#include "Resource.h"// stores information about one resource
+#include "ResourceManager.h"// manages all the resources
+#include "ReservationList.h"// manages the list of active reservations
+#include "WaitingList.h"// manages students waiting for a resource
+#include "CancellationHistory.h" // stores cancelled reservations
 using namespace std;
- // stores information about each resource
- struct Resource {
-    string resourceId;// unique ID for the resource
-    string name;// Name of the resource
-    string type;//type of resource
-    int totalQuantity;//total number available
-
-    int availableQuantity;//number currently available
-};
- //Node for reservation linked list
-struct ReservationNode {
-    Reservation data;//stores reservation information
-    ReservationNode* next;//points to the next reservation
-
-};
-//node for the waiting list queue
-struct WaitingNode {
-    int studentId;//Student ID
-    string studentName;// student name
-    string resourceId;//resource the student is waiting for
-    WaitingNode* next;//Points to the next reservation
-
-};
- //Node for the cancellation history stack
-struct CancellationNode {
-    Reservation data;//stores the cancelled reservation
-
-    CancellationNode* next;// points to the next cancelled reservation
-};
- 
+//reservationmanager is the main class that manages reservations, it connects resources, reservations, waitinglists, and cancellation history
 class ReservationManager {
 private:
-    static const int MAX_RESOURCES = 100;
-    //Array used to store resources
-    Resource resources[MAX_RESOURCES];
-    int resourceCount; //Number of resources currently stored        
-//linked list for active reservations
-    ReservationNode* reservationHead; //First reservation in the list  
-    int reservationCount;  //Number of active reservations             
-    int nextReservationId;   //ID for the next reservation
+    ResourceManager resources; //stores and manages all resources            
+    ReservationList activeReservations; // stores all reservations that are currently active
+    CancellationHistory cancellationHistory; // stores reservations that have been cancelled and also allows us to keep a history of cancellations and restore the most recently cancelled reservation
 
- 
-//Queue for students waiting for a resource
-    WaitingNode* waitingFront;  // First student in the waiting list  
-    WaitingNode* waitingRear;  // Last student in the waiting list
-    int waitingCount;// Number of students waiting
+    map<string, WaitingList> waitLists;// stores a separate waiting list for each resource, the resource ID is used to find its waiting list
 
- //stack used to keep cancellation history
-    CancellationNode* cancellationTop;  
-    int cancellationCount;
- 
-  //Finds a resource using its ID
+    int nextReservationId; //stores the ID that will be given to the next reservation
+    Resource* findResource(const string& resourceId);// searches for a resource using its resource ID and if the resource is found, it returns a pointer to that resource object and if it is not found, it can return nullptr
+    bool validateReservation(const string& resourceId);//checks whether a resource can currently be reserved, it returns true if the reservation is allowed and returns false if the resource cannot be reserved
 
-    Resource* findResource(const string& resourceId); 
-    //checks if a resource can be reserved      
-    bool validateReservation(const string& resourceId);      
- 
 public:
-//creates an empty reservation manager
-
+    // constructor//this function automatically runs when a reservationmanager object is created, it is used to set the starting values such a sstarting nextreservationID at 1
     ReservationManager();
-//cleans up dynamically allocated memory
-    ~ReservationManager();
- //loads resource information from a file
-    bool loadResourcesFromFile(const string& filename);   
-    //Displays all resources
+     ~ReservationManager();// destructor// this function automatically runs when the reservationmanager object is destroyed.// we do not need to manually delete the members here because the other classes clean themselves up.
+     bool loadResourcesFromFile(const string& filename);// reads resource information from a file, the "filename" tells the program which file to read, it returns true if the file loads successfully and returns false if the file cannot be loaded
 
-    void displayAllResources() const; 
-    //shows availability  of a specific resource
-void displayResourceAvailability(const string& resourceId) const; 
+    void displayAllResources();// displays all resources stored in the system,this shows things such as: resourceID, resource name, type,and availability
 
-    bool createReservation(int studentId, const string& studentName, const string& resourceId, const string& reservationDate);// creates a new reservation
+    void displayResourceAvailability(const string& resourceId);// displays information about one specific resource, the resource ID tells the program which resource we want to check
 
-    bool cancelReservation(int reservationId);//cancels a reservation using its ID
-    void displayActiveReservations() const;//displays all active reservations
- 
-    void insertReservation(const Reservation& newReservation);   // adds a reservation to the linked list         
-    bool removeReservation(int reservationId, Reservation& removedReservation); // removes a reservation from the linked list 
-    void traverseReservations() const; // goes through and displays the reservation list                                     
- 
-    void addToWaitingList(int studentId, const string& studentName, const string& resourceId); //adds a student to the end of the waitinglist
-    bool removeFromWaitingList(WaitingNode*& removedNode);  // removes the first student from the waiting list                                    
-    void displayWaitingList() const;// displays all the students in the waiting list
- 
-    void pushCancellation(const Reservation& cancelledReservation);   // adds a cancelled reservatiion to the cancellation history
-    bool restoreLastCancellation();  //restores the most recently cancelled reservation                                  
-    void displayCancellationHistory() const;//displays the cancellation history
+    bool createReservation(int studentId, const string& studentName,
+                            const string& resourceId, const string& reservationDate);// creates a new reservation for a student.
+
+    bool cancelReservation(int reservationId);// cancels an existing reservation and the reservation ID tells the program which reservation should be cancelled
+
+
+    void displayActiveReservations();// displays all reservations that are currently active
+
+    void insertReservation(const Reservation& newReservation);//adds a new reservation to the active reservation list; a new reservation contains all information about the reservation being added
+
+    bool removeReservation(int reservationId, Reservation& removedReservation);// removes a reservation from the active reservation list
+    // reservationId tells the program which reservation to remove and the removed Reservation is used to save a copy of the reservation that was removed.
+
+    void traverseReservations();// goes through the active reservation list and displays the reservations one by one
+
+    void addToWaitingList(int studentId, const string& studentName, const string& resourceId);// adds a student to the waiting list for a resource, this can be used when a resource is not currently available.
+
+    bool removeFromWaitingList(const string& resourceId, int& studentId, string& studentName);//removes the first student from a resource's waitinglist, the waitinglist works like a line: the first student added is the first student removed
+    // resourceid tells us which waiting list to use.
+    //student ID and student name are used to return the information about the student who was removed and it returns false if the waiting list was empty
+
+    void displayWaitingList();// displays the students who are in the waiting list waiting for the resources
+
+    void pushCancellation(const Reservation& cancelledReservation);//adds s cancelled reservation to the cancellation history. This keeps a record of reservations that have been cancelled
+
+    bool restoreLastCancellation();// restores the most recently cancelled reservation and returns true if a cancelled reservation was successfully restored and returns false if there is nothing to restore 
+    void displayCancellationHistory();// displays the history of cancelled reservations.
 };
- 
+
 #endif
