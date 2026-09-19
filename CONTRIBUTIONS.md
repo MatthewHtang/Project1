@@ -9,8 +9,8 @@
 ## Summary Table
 | Team Member | Component(s) | Specific Tasks Completed | Testing/Debugging | GitHub Contributions |
 |-------------|--------------|--------------------------|-------------------|----------------------|
-| Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp<br>•main.cpp | None | None | None |
-| Sankalp | •Resource.h<br>•Resource.cpp<br>•ResourceManager.h<br>•ResourceManager.cpp<br>•CancellationHistory.cpp | None | None | None
+| Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp<br>•main.cpp<br>•CancellationHistory.cpp | None | None | None |
+| Sankalp | •Resource.h<br>•Resource.cpp<br>•ResourceManager.h<br>•ResourceManager.cpp| None | None | None
 | Alka |•Resesrvation.h<br>•Reservation.cpp<br>•ReservationManager.cpp<br>•ReservationManager.h| None | None | None
 
 ---
