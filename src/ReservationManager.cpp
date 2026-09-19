@@ -10,7 +10,6 @@ using namespace std;
 // a ReservationManager object.
 // It gives starting values to all variables.
 ReservationManager::ReservationManager() {
-
     // At the beginning, we have no resources loaded
     resourceCount = 0;
 
