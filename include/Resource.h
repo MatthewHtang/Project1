@@ -2,6 +2,7 @@
 #define RESOURCE_H
 
 #include <string>
+using namespace std;
 // Stores information about a campus resource (e.g., a study room, a projector, a lab, etc.).
 
 class Resource {

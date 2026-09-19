@@ -37,7 +37,7 @@ using namespace std;
  }
 
  /**
-  * Equeue
+  * Enqueue
   * 
   * Adds a student to the back of the line
   * Here, we need two pointers, front and end. If we only have one pointer like 
