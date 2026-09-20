@@ -54,6 +54,9 @@
 
 - **09-19-2026** — Update complexity analysis and fix typos in WaitingList implementation; add tempCodeRunnerFile.h
 [`bf7ff41`](https://github.com/MatthewHtang/Project1/commit/bf7ff4158c40f52bf50d6eaa911f57f569f0b199)
+
+- **09-19-2026** — Update contributions log and README; modify resource availability in resources.txt
+[`76eecd5`](https://github.com/MatthewHtang/Project1/commit/76eecd52f6f660e53bde46cfe01db6ad4347d8ed)
 ---
 
 

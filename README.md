@@ -1,5 +1,7 @@
 # Campus Resource Reservation System
-# Contributors - Matthew Htang, Sankalp Gupta, Alka Gurung
+# CSCE 2110: Foundations of Data Structures
+
+* Contributors - Matthew Htang, Sankalp Gupta, Alka Gurung
 
 This Project is apart of the CSCE 2110: Foundations of Data Structures
 
@@ -13,9 +15,9 @@ Features listed below are not in the system yet, and it is another task for mile
 - Generate Report
 
 - How to run:
-- 1) Open the terminal and clone the repository
-- 2) Open the folder 'Project 1' and compile:    g++ -std=c++17 -Iinclude src/*.cpp -o reservation
-- 3) Run:    ./reservation
+- Open the terminal and clone the repository
+- Open the folder 'Project 1' and compile:    g++ -std=c++17 -Iinclude src/*.cpp -o reservation
+- Run:    ./reservation
 
 And Follow the screen menu.
 
