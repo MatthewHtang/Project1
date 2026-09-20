@@ -2,7 +2,8 @@
 #define RESOURCE_H
 
 #include <string>
-// This class holds the info for one resource, like a study room or a projector.
+using namespace std;
+// Stores information about a campus resource (e.g., a study room, a projector, a lab, etc.).
 
 class Resource {
 private:

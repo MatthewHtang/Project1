@@ -9,9 +9,8 @@
 ## Summary Table
 | Team Member | Component(s) | Specific Tasks Completed | Testing/Debugging | GitHub Contributions |
 |-------------|--------------|--------------------------|-------------------|----------------------|
-| Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp<br>•main.cpp<br>•CancellationHistory.cpp | None | None | None |
-| Sankalp | •Resource.h<br>•Resource.cpp<br>•ResourceManager.h<br>•ResourceManager.cpp| None | None | None
-| Alka |•Reservation.h<br>•Reservation.cpp<br>•ReservationManager.cpp<br>•ReservationManager.h| None | None | None
+| Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp<br>•main.cpp<br>•CancellationHistory.cpp<br>•Readme.md | Please see the Detailed Work Log below | •Rename variable names to match with the caller<br>•Merge Conflicts<br>•Branch Conflicts<br>•Bug Fixed: Commit Tunnel Problems | •Resource.h<br>•Resource.cpp<br>•ResourceManager.h<br>•ResourceManager.cpp| Please see the Detailed Work Log below | None | Please see the Detailed Work Log below
+| Alka |•Reservation.h<br>•Reservation.cpp<br>•ReservationManager.cpp<br>•ReservationManager.h| Please see the Detailed Work Log below | None | Please see the Detailed Work Log below
 
 ---
 
@@ -51,6 +50,12 @@
 
 - **09-18-2026** — Refactor main.cpp: Remove ResourceManager instantiation and clean up input handling
 [`6d431e8`](https://github.com/MatthewHtang/Project1/commit/6d431e85ca79d5133b8619fce893861f6530541a)
+
+- **09-19-2026** — Update complexity analysis and fix typos in WaitingList implementation; add tempCodeRunnerFile.h
+[`bf7ff41`](https://github.com/MatthewHtang/Project1/commit/bf7ff4158c40f52bf50d6eaa911f57f569f0b199)
+
+- **09-19-2026** — Update contributions log and README; modify resource availability in resources.txt
+[`76eecd5`](https://github.com/MatthewHtang/Project1/commit/76eecd52f6f660e53bde46cfe01db6ad4347d8ed)
 ---
 
 
