@@ -14,10 +14,40 @@ Features listed below are not in the system yet, and it is another task for mile
 - Sort Resources
 - Generate Report
 
+### 📂 Project Structure
+```
+├──📂data/
+│   ├── reservations.txt
+│   └── resources.txt
+├──📂include/
+│   ├── CancellationHistory.h
+│   ├── Reservation.h
+│   ├── ReservationList.h
+│   ├── ReservationManager.h
+│   ├── Resource.h
+│   ├── ResourceManager.h
+│   ├── tempCodeRunnerFile.h
+│   └── WaitingList.h
+├──📂src/
+│   ├── CancellationHistory.cpp
+│   ├── main.cpp
+│   ├── Reservation.cpp
+│   ├── ReservationList.cpp
+│   ├── ReservationManager.cpp
+│   ├── Resource.cpp
+│   ├── ResourceManager.cpp
+│   └── WaitingList.cpp
+├── .gitignore
+├── COMPLEXITY.md
+├── CONTRIBUTIONS.md
+└── README.md
+```
+
 - How to run:
 - Open the terminal and clone the repository
 - Open the folder 'Project 1' and compile:    g++ -std=c++17 -Iinclude src/*.cpp -o reservation
 - Run:    ./reservation
 
 And Follow the screen menu.
+
 
