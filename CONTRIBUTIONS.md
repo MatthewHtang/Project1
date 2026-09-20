@@ -9,8 +9,7 @@
 ## Summary Table
 | Team Member | Component(s) | Specific Tasks Completed | Testing/Debugging | GitHub Contributions |
 |-------------|--------------|--------------------------|-------------------|----------------------|
-| Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp<br>•main.cpp<br>•CancellationHistory.cpp<br>•Readme.md | Please see the Detailed Work Log below | •Rename variable names to match with the caller<br>•Merge Conflicts<br>Branch Conflicts<br> | Please see the Detailed Work Log below |
-| Sankalp | •Resource.h<br>•Resource.cpp<br>•ResourceManager.h<br>•ResourceManager.cpp| Please see the Detailed Work Log below | None | Please see the Detailed Work Log below
+| Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp<br>•main.cpp<br>•CancellationHistory.cpp<br>•Readme.md | Please see the Detailed Work Log below | •Rename variable names to match with the caller<br>•Merge Conflicts<br>•Branch Conflicts<br>•Bug Fixed: Commit Tunnel Problems | •Resource.h<br>•Resource.cpp<br>•ResourceManager.h<br>•ResourceManager.cpp| Please see the Detailed Work Log below | None | Please see the Detailed Work Log below
 | Alka |•Reservation.h<br>•Reservation.cpp<br>•ReservationManager.cpp<br>•ReservationManager.h| Please see the Detailed Work Log below | None | Please see the Detailed Work Log below
 
 ---
