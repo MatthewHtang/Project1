@@ -1,5 +1,5 @@
 # Campus Resource Reservation System
-# CSCE 2110: Foundations of Data Structures
+### CSCE 2110: Foundations of Data Structures
 
 * Contributors - Matthew Htang, Sankalp Gupta, Alka Gurung
 
