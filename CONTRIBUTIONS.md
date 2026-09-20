@@ -74,8 +74,20 @@
 
 ## Alka
 - **09-10-2026** — Initial commit. [`335d9d3`](https://github.com/MatthewHtang/Project1/commit/335d9d31a67b271892aa9c6ae1bd517e09a8453a)
-- **09-17-2026** — [Added ReservationManager.h to define the structures and functions for resources, reservations, waiting list, and cancellation history]. [`137dafa`](https://github.com/MatthewHtang/Project1/commit/137dafa71ecefaaa24baec0b3f4662f9f638a2be)
-- **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+- **09-17-2026** — Added ReservationManager.h to define the structures and functions for resources, reservations, waiting list, and cancellation history. [`137dafa`](https://github.com/MatthewHtang/Project1/commit/137dafa71ecefaaa24baec0b3f4662f9f638a2be)
+- **09-17-2026** — Updates and debugging reservation.h. [`a614795`](https://github.com/MatthewHtang/Project1/commit/a614795a2bb4fe01eef1eb5013e29c3cdd6b8f1a)
+- **09-17-2026** — Merge branch 'main' of https://github.com/MatthewHtang/Project1 into alka. [`35f8624`](https://github.com/MatthewHtang/Project1/commit/35f86241d486fab8f909a09061d3e1fe8dc0f5c9)
+- **09-17-2026** — Fixed bug2: Commit tunnel problem. [`4f67b27`](https://github.com/MatthewHtang/Project1/commit/4f67b27d948cab0f538f18e91002d220d948e9bc)
+- **09-17-2026** — Updated CONTRIBUTIONS.md with detailed task descriptions and added string include in Reservation.cpp. [`715bcf6`](https://github.com/MatthewHtang/Project1/commit/715bcf6dee3615ca4846ec3abd56b6371833bffa)
+- **09-17-2026** — Update contributions to include ReservationManager files.['a2e0bb3'](https://github.com/MatthewHtang/Project1/commit/a2e0bb3b41e5b07741e2fe4e40f7fae984adb3c8)
+
+- **09-18-2026** — Add ReservationManager implementation. ['7a4e496'](https://github.com/MatthewHtang/Project1/commit/7a4e496575dc6789778675adf0a8e7400a8ee34e)
+
+- **09-18-2026** — Update Reservation manager header. ['057327f'](https://github.com/MatthewHtang/Project1/commit/057327f95bacd92190e34c4fd07c499b813f9500)
+- **09-18-2026** — Update ReservationManager implementation.[' 
+c4b20ae'](https://github.com/MatthewHtang/Project1/commit/c4b20aef46b3093d4b0d93242e136b297d7b8761)
+
+
 
 
 - Repository: https://github.com/MatthewHtang/Project1.git
