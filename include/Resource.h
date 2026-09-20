@@ -2,33 +2,33 @@
 #define RESOURCE_H
 
 #include <string>
-// Stores information about a campus resource (e.g., a study room, a projector, a lab, etc.).
+// This class holds the info for one resource, like a study room or a projector.
 
 class Resource {
 private:
-    string resourceId;                 // Unique identifier for this resource
-    string resourceName;       // Name of the resource (e.g., "Study Room A", "Projector 1")
-    string resourceType;       // category/type of the resource (e.g., "Room", "Equipment", "Lab")
-    bool available;                     // Indicates whether the resource is currently in use
-
+    string resourceId;        // the resource's ID, like "R101"
+    string resourceName;      // the name, like "Study Room A"
+    string resourceType;      // the type, like "Room" or "Equipment"
+    bool available;           // true if you can book it right now
 public:
-    // Creates a resource with default values.
+    // Makes an empty resource. Used before we fill in real info.
     Resource();
 
-    // Constructor for creating a resource.
+    // Makes a resource with real info.
     Resource(std::string resourceId, std::string resourceName, std::string resourceType, bool available);
 
     // Getters 
+    // These jsut hand back one piece of info each. Nothng tricky.
     string getResourceId() const;
     string getResourceName() const;
     string getResourceType() const;
     bool isAvailable() const;
 
     // Setter
-    // Updates whether the resource is currently in use.
+    // Flips a resource between available and not available.
     void setAvailable(bool available);  
 
-    // Prints the resource's information to the console.
+    // Prints the resource's info to the screen.
     void display() const; 
 };
 

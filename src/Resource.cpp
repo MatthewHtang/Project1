@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// Default constructor
+// This runs when we make a blank Resource, before we have real data for it.
 Resource :: Resource() {
     resourceId = "";
     resourceName = "";
@@ -13,7 +13,7 @@ Resource :: Resource() {
 
 } 
 
-// Main constructor with resource information
+// This  runs when we make a real Resource, with actual info filled in.
 Resource :: Resource(string resourceId, string resourceName, string resourceType, bool available) {
     this->resourceId = resourceId;
     this->resourceName = resourceName;
@@ -36,17 +36,17 @@ string Resource :: getResourceType() const {
     return resourceType;
 }
 
-// Returns the current status of the resource
+// Tells us if the resource can be booked right now.
 bool Resource :: isAvailable() const {
     return available;
 }
 
-// Changes the resource status
+// Marks the resource as available or not available.
 void Resource :: setAvailable(bool available) {
     this->available = available;
 }
 
-// Displayes the resource information
+// Prints out everything about this one resource, on one line.
 void Resource :: display() const {
     cout << "ID: " << resourceId
          << " | Name: " << resourceName
