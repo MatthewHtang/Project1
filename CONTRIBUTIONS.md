@@ -10,7 +10,8 @@
 | Team Member | Component(s) | Specific Tasks Completed | Testing/Debugging | GitHub Contributions |
 |-------------|--------------|--------------------------|-------------------|----------------------|
 | Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp<br>•main.cpp<br>•CancellationHistory.cpp<br>•Readme.md | Please see the Detailed Work Log below | •Rename variable names to match with the caller<br>•Merge Conflicts<br>•Branch Conflicts<br>•Bug Fixed: Commit Tunnel Problems | •Resource.h<br>•Resource.cpp<br>•ResourceManager.h<br>•ResourceManager.cpp| Please see the Detailed Work Log below | None | Please see the Detailed Work Log below
-| Alka |•Reservation.h<br>•Reservation.cpp<br>•ReservationManager.cpp<br>•ReservationManager.h| Please see the Detailed Work Log below | None | Please see the Detailed Work Log below
+| Alka |•Reservation.h<br>•Reservation.cpp<br>•ReservationManager.cpp<br>•ReservationManager.h| •Designed the Reservation class<br>•Wrote Reservation constructors, getters, and display<br>•Wrote ReservationManager to connect all the classes<br>•Implemented create, cancel, and undo reservation<br>•Added one waiting list per resource using a map<br>•Wrote complexity breakdown for my classes | •Tested reserving an available and an unavailable resource<br>•Tested cancelling with and without a waiting list<br>•Tested undoing a cancellation<br>•Fixed errors in ReservationManager.cpp | •Reservation.h<br>•Reservation.cpp<br>•ReservationManager.h<br>•ReservationManager.cpp |
+
 
 ---
 
