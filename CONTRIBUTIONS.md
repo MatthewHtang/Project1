@@ -55,6 +55,9 @@
 
 - **09-19-2026** — Update contributions log and README; modify resource availability in resources.txt
 [`76eecd5`](https://github.com/MatthewHtang/Project1/commit/76eecd52f6f660e53bde46cfe01db6ad4347d8ed)
+
+- **09-20-2026** — Update contribution details: Refine task descriptions and testing outcomes for Matthew, Alka, and Sankalp.[`e17bd02`](https://github.com/MatthewHtang/Project1/commit/e17bd02768160a3636bd4c8d3c22cfd8ac5618fb)
+
 ---
 
 
