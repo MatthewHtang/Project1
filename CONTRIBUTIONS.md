@@ -11,9 +11,7 @@
 |-------------|--------------|--------------------------|-------------------|----------------------|
 | Matthew | •ReservationList.h<br>•ReservationList.cpp<br>•WaitingList.h<br>•WaitingList.cpp<br>•main.cpp<br>•CancellationHistory.cpp<br>•Readme.md | Please see the Detailed Work Log below | •Rename variable names to match with the caller<br>•Merge Conflicts<br>•Branch Conflicts<br>•Bug Fixed: Commit Tunnel Problems | •Resource.h<br>•Resource.cpp<br>•ResourceManager.h<br>•ResourceManager.cpp| Please see the Detailed Work Log below | None | Please see the Detailed Work Log below
 | Alka |•Reservation.h<br>•Reservation.cpp<br>•ReservationManager.cpp<br>•ReservationManager.h| •Designed the Reservation class<br>•Wrote Reservation constructors, getters, and display<br>•Wrote ReservationManager to connect all the classes<br>•Implemented create, cancel, and undo reservation<br>•Added one waiting list per resource using a map<br>•Wrote complexity breakdown for my classes | •Tested reserving an available and an unavailable resource<br>•Tested cancelling with and without a waiting list<br>•Tested undoing a cancellation<br>•Fixed errors in ReservationManager.cpp | •Reservation.h<br>•Reservation.cpp<br>•ReservationManager.h<br>•ReservationManager.cpp |
-
-
----
+|Sankalp | •Resource.h<br>•Resource.cpp<br>•ResourceManager.cpp<br>•ResourceManager.h| Please see the Detailed Work Log below | •Designed the Resource class (ID, name, type, availability) •Wrote Resource constructors, getters, setter, and display •Wrote ResourceManager to load resources from a file, store them, display them, and look them up •Added findById, exists, and setAvailable so other classes can check and update a resource •Wrote complexity breakdown for my classes | •Loaded and tested the real 20-resource data file •Tested displayAll and displayAvailable with empty and full lists •Fixed a bug where Resource.h wouldn't compile on its own (missing using namespace std) •Tested edge cases: bad filename, default-constructed Resource | 
 
 # Detailed Work Log
 
@@ -62,13 +60,24 @@
 
 ## Sankalp
 - **09-08-2026** — Testing from Sankalp Branch. [`780e914`](https://github.com/MatthewHtang/Project1/commit/780e914e2da494096fc1eb2a406ec09851d14e21)
-- **09-10-2026** — Added the Resource class header file (Resource.h) and added variables for resource ID, name, type, and availability. Also added  constructor functions. [`a1b2c3d`](../../commit/a1b2c3d)
-- **09-13-2026** — Added resource.cpp class. [`427e3bd`](https://github.com/MatthewHtang/Project1/commit/427e3bda29c3c6157f77e9d7d318f12b8ad4bb4b)
-- **09-15-2026** — Added resourceManager class header with comments. [`
-95e32d8`](https://github.com/MatthewHtang/Project1/commit/95e32d84733e075d6410fb2b49537f22e24008f0)
+
+- **09-10-2026** — Added the Resource class header file (Resource.h) and added variables for resource ID, name, type, and availability. Also added  constructor functions. [`ff611d3`](https://github.com/MatthewHtang/Project1/commit/ff611d39b11bd87ff3fd3166af77cc5f595e7b52)
+
+- **09-14-2026** — Added resource.cpp class. [`427e3bd`](https://github.com/MatthewHtang/Project1/commit/427e3bda29c3c6157f77e9d7d318f12b8ad4bb4b)
+
+- **09-14-2026** — Added using namespace std; to Resource.h to fix a bug where the header wouldn't compile on its own. [`a7bc612`](https://github.com/MatthewHtang/Project1/commit/a7bc612aa8bb713845b736c27e31f263d6592189)
+
+- **09-15-2026** — Added resourceManager class header with comments. [`95e32d8`](https://github.com/MatthewHtang/Project1/commit/95e32d84733e075d6410fb2b49537f22e24008f0)
+
 - **09-17-2026** — Added resourceManager.cpp, reservation.txt, resource.txt files in the github. [`01cbf9c`](https://github.com/MatthewHtang/Project1/commit/01cbf9c4603dc5af269986cdc1387e9287f49a4c)
-- **09-19-2026** — Edited contributions.md and reosurceManager file. [`a1b2c3d`](../../commit/a1b2c3d)
-- **MM-DD-YYYY** — [Write what you did and why here]. [`a1b2c3d`](../../commit/a1b2c3d)
+
+- **09-19-2026** — Added complexity analysis for the Resource and ResourceManager classes in COMPLEXITY.md. [`3dfc9ed`](https://github.com/MatthewHtang/Project1/commit/3dfc9edca1bc4695341e120a0aeca0a6fc1a7372)
+
+- **09-19-2026** — Edited contributions.md and reosurceManager file. [`8121381`](https://github.com/MatthewHtang/Project1/commit/81213815cbb91e2a89573f3e3802d8e253ff0f72)
+
+- **09-20-2026** — Refactored Resource and ResourceManager classes to improve comments for clarity and readability. [`391018d`](https://github.com/MatthewHtang/Project1/commit/391018d6bd55f0fd830a80e2cc1c51d48c75addc)
+
+- **09-20-2026** — Enhanced the complexity analysis for Resource and ResourceManager classes with more detailed explanations. [`c09f91f`](https://github.com/MatthewHtang/Project1/commit/c09f91f53089464a868a96b4448c7e8d2e720842#diff-8d62d6c84ad647eb2812f69f68291b3387d056b7281980f3163748d94b0d8f7c)
 
 ---
 
