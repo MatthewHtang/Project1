@@ -3,7 +3,10 @@
 # Sankalp's Complexity
 
 - Resource
+For the Resource class, I designed a class that stores data about a particular resource, including its ID, name, type, and whether it is currently used or available. The class also has to have getter functions that let the program retrieve this information and a setter that updates the status of a resource if the user wants to use it or mark it as returned. We can compare the Resource class to an index card that contains all the data about a single resource, not some resource. This index card must have an ID, a name, a type, and a status; in other words, the information about more than one resource cannot be placed on the same card. For this reason, the methods in my code only work with one value, either getting it from the Resource object or changing this value, so the time complexity of these operations is O(1). 
+
 - ResourceManager
+For the ResourceManager class, I have implemented loading resources from a file, storing them, displaying them, and looking them up by ID. I have used a vector to store them, so imagine that I have a collection of these index cards, unordered, just thrown in a pile in the order that I have read from the file. The loadFromFile() method goes through the file once to create a resource for each record, which is O(n). Both the displayAll() and displayAvailable() methods go through the entire vector to display each resource, which is also O(n). The findById(), exists(), and setAvailable() methods have to look at each resource in the vector, starting at the first one, until they find the one they are looking for, since the resources are not ordered or indexed somehow, which is O(n) in the worst case. The getCount() and isEmpty() methods are O(1) since the vector holds a count of the number of resources it contains, so we don't have to iterate over the vector to get that information.
 
 # Matthew's Complexity Breakdown
 
