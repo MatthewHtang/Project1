@@ -114,3 +114,76 @@ int ResourceManager::getCount() {
 bool ResourceManager::isEmpty() { 
     return resources.empty();
 }
+
+// Sorts the resource by name, A to z. Just kicks off mergeSort on the whole vector.
+void ResourceManager::sortByName() {
+    if (resources.empty()){
+        return;
+
+    }
+    mergeSort(0, static_cast<int>(resources.size()) -1);
+
+}
+
+// Splits the range in half, sorts each half, then merge them back together.
+// This keeps happening until we're down to pieces of size 1, which are
+// already "sorted" by themselves.
+void ResourceManager::mergeSort(int left, int right){
+    if (left >= right) {
+        return; // one resource (or none) left in this range, nothing to sort
+
+    }
+    int mid = left + (right - left) / 2;
+
+    mergeSort(left, mid);       // sort the left half
+    mergeSort(mid + 1, right);  // sort the right half
+    merge(left, mid, right);    // combine both sorted halves
+    
+}
+
+// Takes two sorted halves (left..mid and mid+1..right) and combines them
+// back into one sorted piece, comparing names one at a time.
+void ResourceManager::merge(int left, int midm int right) {
+    vector<Resource> leftHalf;
+    vector<Resource> rightHalf;
+    
+    for (int i = left; i <= mid; i++){
+        leftHalf.push_back(reosurces[i]);
+
+    }
+    for (int i = mid + 1; i <= right; i++) {
+        rightHalf.push_back(resource[i]);
+
+    }
+
+    size_t i = 0;   // where we are in leftHalf
+    size_t j = 0;   // where we are in rightHalf
+    int k = left;   // where we are writing back into resources
+
+    // pick whichever name comes first alphabetically, one at a time
+    while (i < leftHalf.size() && j < rightHalf.size()) {
+        if (leftHalf[i].getResourceName() <= rightHalf[j].getResource()) {
+            resource[k] = leftHalf[i];
+            i++;
+
+        }else {
+            resources[k] = leftHalf[j];
+            j++;
+        }
+        k++;
+    } 
+
+    // ome of the halves runs out first, so just copy whatever's left in the oher one 
+    while (i < leftHalf.size()) {
+        resources[k] = leftHalf[i];
+        i++;
+        k++;
+    }
+
+    while (j < rightHalf.size()) {
+        resources[k] = rightHalf[i];
+        j++;
+        k++;
+    
+    }
+}

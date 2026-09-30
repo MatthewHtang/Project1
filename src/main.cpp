@@ -127,8 +127,11 @@ int main() {
             reservationManager.restoreLastCancellation();
             break;
 
-            case 6:
             case 7:
+            reservationManager.sortResourcesByName();
+            break;
+
+            case 6:
             case 8:
             // Fture milestone
             cout << "\nThis feature will be available in the final submission." << endl;

@@ -49,6 +49,14 @@ Resource* ReservationManager::findResource(const string& resourceId) {
     return resources.findById(resourceId);
 }
 
+// Sorts all the resources by name (A to z), then shows the new order.
+// The actual sorting happens inside ResourceManager, this just calls it.
+void ReservationManager::sortResourcesByName() {
+    resources.sortByName();
+    resources.displayAll();
+    
+}
+
 // Checks if a resource can be reserved
 // If findResource() finds the resource, this returns true.
 // Otherwise, it returns false.

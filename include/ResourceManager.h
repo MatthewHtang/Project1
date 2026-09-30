@@ -13,6 +13,10 @@ private:
 
     vector<Resource> resources;     // every resource we've loaded goes in here
 
+    // These two do the actual merge sort. sortByName() just kicks it off.
+    void mergeSort(int left, int right); 
+    void merge(int left, int mid, int right);
+
 public:
     // Reads resources from a file and stores them. Returns false if the file won't open.
     bool loadFromFile(string filename); 
@@ -21,9 +25,11 @@ public:
     void displayAvailable();            // prints resources that are available (not in use)
 
     Resource* findById(string resourceId); // finds a reosurce by its ID. Gives back nullptr if it's not there.
-    bool exists(string resourceId);        // checks if the resource ID exists in the system
+    bool exists(string resourceId);        // checks if the resource ID exists in the system.
     bool setAvailable(string resourceId, bool inUse);     // Marks a resource as available or not, by its ID.
 
+    void sortByName();                  // sorts all the resources A to Z by name, using merge sort.
+    
     int getCount();                     // returns the number of resources are loaded right now.
     bool isEmpty();                     // True if we haven't loaded any resources yet.
 };

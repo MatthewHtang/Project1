@@ -33,6 +33,8 @@ public:
 
     void displayResourceAvailability(const string& resourceId);// displays information about one specific resource, the resource ID tells the program which resource we want to check
 
+    void sortResourcesByName(); // sorts all the resources by name using merge sort, then shows the new order
+    
     bool createReservation(int studentId, const string& studentName,
                             const string& resourceId, const string& reservationDate);// creates a new reservation for a student.
 
