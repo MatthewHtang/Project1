@@ -82,6 +82,9 @@
 
 - **09-20-2026** — Enhanced the complexity analysis for Resource and ResourceManager classes with more detailed explanations. [`c09f91f`](https://github.com/MatthewHtang/Project1/commit/c09f91f53089464a868a96b4448c7e8d2e720842#diff-8d62d6c84ad647eb2812f69f68291b3387d056b7281980f3163748d94b0d8f7c)
 
+- **09-27-2026** — 
+Implement merge sort for resource management and enhance sorting functionality. [`f2710e6`](https://github.com/MatthewHtang/Project1/commit/f2710e6676453805ac9a518a7f876b1213d671e8)
+
 ---
 
 ## Alka
