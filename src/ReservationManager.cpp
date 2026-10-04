@@ -1,5 +1,6 @@
 #include "ReservationManager.h"
 #include <iostream>
+#include <cctype>
 
 using namespace std;
 

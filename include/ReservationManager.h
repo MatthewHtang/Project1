@@ -22,6 +22,7 @@ private:
     int nextReservationId; //stores the ID that will be given to the next reservation
     Resource* findResource(const string& resourceId);// searches for a resource using its resource ID and if the resource is found, it returns a pointer to that resource object and if it is not found, it can return nullptr
     bool validateReservation(const string& resourceId);//checks whether a resource can currently be reserved, it returns true if the reservation is allowed and returns false if the resource cannot be reserved
+    bool isValidDate(const string& date);// checks that a date string is actually in YYYY-MM-DD format with a real month and day
 
 public:
     // constructor//this function automatically runs when a reservationmanager object is created, it is used to set the starting values such a sstarting nextreservationID at 1

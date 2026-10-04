@@ -25,6 +25,8 @@ class ReservationList {
   void insert(Reservation r);   //This function adds reservation to the list
   bool remove(int reservationId);   //This function removes a reservation based on its ID
   Reservation* findById(int reservationId);   //This function searches the linked list for a reservation
+  Reservation* FindByStudentId(int studentId);   //This function searches the linked list for a reservation by student ID
+  Reservation* FindByResourceId(string resourceId);   //This function searches the linked list
   void displayAll();    //This function will print every reservation
   bool isEmpty();   //This checks whether the list has anything inside it
   int getCount();   //  To get the number of reservation

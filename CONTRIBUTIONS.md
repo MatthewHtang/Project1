@@ -85,6 +85,9 @@
 - **09-27-2026** — 
 Implement merge sort for resource management and enhance sorting functionality. [`f2710e6`](https://github.com/MatthewHtang/Project1/commit/f2710e6676453805ac9a518a7f876b1213d671e8)
 
+- **09-29-2026** — 
+Implement merge sort for resource management and enhance sorting functionality. [`f2710e6`](https://github.com/MatthewHtang/Project1/commit/76342124787c79409acc7a1ac4fd1ccb6999341a)
+
 ---
 
 ## Alka
