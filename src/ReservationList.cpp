@@ -129,6 +129,28 @@ return nullptr;
 }
 
 // ================================================
+// Find By Student ID and Resource ID
+// Same idea as findById, but checks two things on each node
+// inside of one, so we can catch a student double-booking the same reasource.
+// ================================================
+Reservation* ReservationList::findByStudentAndResource(int studentId, string resourceId) {
+    Node* current = head;   // Declare head as current
+
+    while (current != nullptr) {
+
+        // If the current student AND resource match what we're looking for
+        if(current->data.getStudentId() == studentId && current->data.getResourceId() == resourceId) {
+            
+            // We will return that Node data
+            return &(current->data);
+        }
+        // Move forward to check
+        current = current->next;
+    }
+    return nullptr;
+}
+
+// ================================================
 // Display All
 // ================================================
 void ReservationList::displayAll() {
@@ -167,5 +189,3 @@ bool ReservationList::isEmpty() {
 int ReservationList::getCount() {
     return count;
 }
-
-

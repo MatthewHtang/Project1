@@ -19,10 +19,10 @@ CancellationHistory::~CancellationHistory(){
     // We put a not 'current' on the top of the stack
     SNode* current = top;
 
-    //if top is not nullptr (meaning if the list exist)
-    if (top != nullptr){
-        //save the third node from the top as 'saveNext'
-        SNode* saveNext = top->next;
+    //as long as there's still a node left (keep going, not just once)
+    while (current != nullptr){
+        //save the next node before deleting this one
+        SNode* saveNext = current->next;
         delete current;     // Once we delete the current node
         current = saveNext;     // We say our saveNext is the current now
     }
@@ -117,7 +117,7 @@ void CancellationHistory::displayAll() {
     int position = 1;       // Started counting
 
     //As long as we dont hit nullptr
-    while (top != nullptr)
+    while (current != nullptr)
     {
         //Layout the position
         cout << position << ". ";

@@ -143,17 +143,15 @@ void ResourceManager::mergeSort(int left, int right){
 
 // Takes two sorted halves (left..mid and mid+1..right) and combines them
 // back into one sorted piece, comparing names one at a time.
-void ResourceManager::merge(int left, int midm int right) {
+void ResourceManager::merge(int left, int mid, int right) {
     vector<Resource> leftHalf;
     vector<Resource> rightHalf;
     
     for (int i = left; i <= mid; i++){
-        leftHalf.push_back(reosurces[i]);
-
+        leftHalf.push_back(resources[i]);
     }
     for (int i = mid + 1; i <= right; i++) {
-        rightHalf.push_back(resource[i]);
-
+        rightHalf.push_back(resources[i]);
     }
 
     size_t i = 0;   // where we are in leftHalf
@@ -162,18 +160,17 @@ void ResourceManager::merge(int left, int midm int right) {
 
     // pick whichever name comes first alphabetically, one at a time
     while (i < leftHalf.size() && j < rightHalf.size()) {
-        if (leftHalf[i].getResourceName() <= rightHalf[j].getResource()) {
-            resource[k] = leftHalf[i];
+        if (leftHalf[i].getResourceName() <= rightHalf[j].getResourceName()) {
+            resources[k] = leftHalf[i];
             i++;
-
-        }else {
-            resources[k] = leftHalf[j];
+        } else {
+            resources[k] = rightHalf[j];
             j++;
         }
         k++;
     } 
 
-    // ome of the halves runs out first, so just copy whatever's left in the oher one 
+    // one of the halves runs out first, so just copy whatever's left in the other one 
     while (i < leftHalf.size()) {
         resources[k] = leftHalf[i];
         i++;
@@ -181,9 +178,8 @@ void ResourceManager::merge(int left, int midm int right) {
     }
 
     while (j < rightHalf.size()) {
-        resources[k] = rightHalf[i];
+        resources[k] = rightHalf[j];
         j++;
         k++;
-    
     }
 }

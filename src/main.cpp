@@ -47,7 +47,9 @@ int main() {
         cout << "       6. Search Reservations\n";
         cout << "       7. Sort Resources\n";
         cout << "       8. Generate Report\n";
-        cout << "       9. Exit\n";
+        cout << "       9. View Active Reservations\n";
+        cout << "       10. View Cancellation History\n";
+        cout << "       11. Exit\n";
         cout << "---------------------------------------------------\n";
         cout << "       Enter Choice: ";
         
@@ -57,7 +59,7 @@ int main() {
         if (cin.fail()){
             // called the function we just built
             clearInputPipe();
-            cout << "\nInvalid Input: Please enter a valid number from 1 to 9" << endl;
+            cout << "\nInvalid Input: Please enter a valid number from 1 to 11" << endl;
             continue;
         }
         clearInputPipe();
@@ -68,7 +70,6 @@ int main() {
             //To view resources
             case 1:
             reservationManager.displayAllResources();
-            reservationManager.displayActiveReservations();
             break;
 
             // Create a reservation
@@ -137,19 +138,28 @@ int main() {
             cout << "\nThis feature will be available in the final submission." << endl;
             break;
 
-            //say goodbye when the user choose 9
+            //Viewing active reservations
             case 9:
+            reservationManager.displayActiveReservations();
+            break;
+
+            //Viewing cancellation history
+            case 10:
+            reservationManager.displayCancellationHistory();
+            break;
+
+            //say goodbye when the user choose 11
+            case 11:
             cout << "Good Bye." << endl;
             break;
 
             // Else the user put something not a number
             default:
-            cout <<"\nInvalid choice. Please enter a number from 1 to 9." << endl;
+            cout <<"\nInvalid choice. Please enter a number from 1 to 11." << endl;
             break;
         }
 
-    } while (choice != 9);
+    } while (choice != 11);
     
     return 0;
 }
-
