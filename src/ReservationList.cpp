@@ -189,29 +189,3 @@ bool ReservationList::isEmpty() {
 int ReservationList::getCount() {
     return count;
 }
-// ================================================
-// Count By Resource ID
-// Counts how many active reservations belong
-// to a specific resource
-// ================================================
-int ReservationList::countByResourceId(const string& resourceId) {
-
-    int resourceCount = 0;
-
-    // Start at the first reservation
-    Node* current = head;
-
-    // Go through every reservation in the linked list
-    while (current != nullptr) {
-
-        // Check if this reservation uses the resource
-        if (current->data.getResourceId() == resourceId) {
-            resourceCount++;
-        }
-
-        // Move to the next reservation
-        current = current->next;
-    }
-
-    return resourceCount;
-}

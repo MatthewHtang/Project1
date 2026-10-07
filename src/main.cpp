@@ -133,14 +133,10 @@ int main() {
             break;
 
             case 6:
-    // Future milestone
-    cout << "\nThis feature will be available in the final submission." << endl;
-    break;
-
-// Generate full report
-case 8:
-    reservationManager.generateReport();
-    break;
+            case 8:
+            // Fture milestone
+            cout << "\nThis feature will be available in the final submission." << endl;
+            break;
 
             //Viewing active reservations
             case 9:

@@ -183,8 +183,3 @@ void ResourceManager::merge(int left, int mid, int right) {
         k++;
     }
 }
-
-// Gives access to all resources for reporting
-const vector<Resource>& ResourceManager::getResources() const {
-    return resources;
-}

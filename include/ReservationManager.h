@@ -63,20 +63,6 @@ public:
 
     bool restoreLastCancellation();// restores the most recently cancelled reservation and returns true if a cancelled reservation was successfully restored and returns false if there is nothing to restore 
     void displayCancellationHistory();// displays the history of cancelled reservations.
-    // displays all active reservations in the report
-    void reportActiveReservations();
-
-    // displays each resource and the number of reservations
-    // associated with that resource
-    void reportResourceUtilization();
-
-    // displays the resource or resources with the most reservations
-    void reportMostRequestedResources();
-
-    // displays the number of students waiting for each resource
-    void reportWaitingListStatistics();
-
-    // displays all four reports together
-    void generateReport();};
+};
 
 #endif
