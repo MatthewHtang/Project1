@@ -32,6 +32,10 @@ public:
     
     int getCount();                     // returns the number of resources are loaded right now.
     bool isEmpty();                     // True if we haven't loaded any resources yet.
+ 
+ 
+    // Gives access to the list of resources for reporting
+const vector<Resource>& getResources() const;
 };
 
 #endif 

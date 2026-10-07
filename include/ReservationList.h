@@ -1,4 +1,4 @@
-// Incldue header guards to avoid compiler error
+// Include header guards to avoid compiler error
 #ifndef RESERVATIONLIST_H
 #define RESERVATIONLIST_H
 
@@ -30,5 +30,7 @@ class ReservationList {
   void displayAll();    //This function will print every reservation
   bool isEmpty();   //This checks whether the list has anything inside it
   int getCount();   //  To get the number of reservation
+  // Counts how many active reservations belong to a specific resource
+int countByResourceId(const string& resourceId);
 };
 #endif
