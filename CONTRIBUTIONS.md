@@ -58,6 +58,8 @@
 
 - **09-20-2026** — Update contribution details: Refine task descriptions and testing outcomes for Matthew, Alka, and Sankalp.[`e17bd02`](https://github.com/MatthewHtang/Project1/commit/e17bd02768160a3636bd4c8d3c22cfd8ac5618fb)
 
+- **10-07-2026** — Solved Merge Conflict and add search functionality.[`e090339`](https://github.com/MatthewHtang/Reservation_System/commit/e090339f6aa553986b058b30f7724e062fb18520)
+
 ---
 
 
