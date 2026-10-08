@@ -128,14 +128,54 @@ int main() {
             reservationManager.restoreLastCancellation();
             break;
 
+            //Search reservation
+            case 6:
+            int searchChoice;
+            cout << "\n-----Search-----" << endl;
+            cout << "1. Find a reservation by ID" << endl;
+            cout << "2. Find a reservations by student ID" << endl;
+            cout << "3. Find a resource by ID" << endl;
+            cout << "Enter Choice: " << endl;
+            cin >> searchChoice;
+
+            clearInputPipe();//cleaning the pipe
+
+            if (searchChoice == 1){
+                int reservationId;
+                cout << "Reservation ID: " ;
+                cin >> reservationId;
+
+                clearInputPipe();
+                reservationManager.searchReservationById(reservationId);
+            }
+            else if (searchChoice == 2){
+                int studentId;
+                cout << "Student ID: ";
+                cin >>studentId;
+
+                clearInputPipe();
+                reservationManager.searchReservationById(studentId);
+            }
+            else if (searchChoice == 3){
+                string resourceId;
+                cout << "Resource ID: ";
+                cin >> resourceId;
+                
+                clearInputPipe();
+                reservationManager.searchResourceById(resourceId);
+            }
+            else {
+                cout << "Invalid choice. Please enter a valid number." << endl;
+            }
+
+
             case 7:
             reservationManager.sortResourcesByName();
             break;
-
-            case 6:
+            
+            // Generate full report
             case 8:
-            // Fture milestone
-            cout << "\nThis feature will be available in the final submission." << endl;
+            reservationManager.generateReport();
             break;
 
             //Viewing active reservations

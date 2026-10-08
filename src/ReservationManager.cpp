@@ -248,3 +248,60 @@ bool ReservationManager::restoreLastCancellation() {
 void ReservationManager::displayCancellationHistory() {
     cancellationHistory.displayAll();
 }
+
+/**
+ * SEARCHING
+ * All three use the linear search, walk the structure from the start
+ * and compare each element
+ */
+
+ //finds one reservation by its ID and prints it out
+ bool ReservationManager::searchReservationById(int reservationId){
+
+    Reservation* found = activeReservations.findById(reservationId);
+
+    if (found == nullptr) {
+        cout << "No active reservation with ID " << reservationId <<".";
+        return false;
+    
+    }
+    
+    cout << "\nReservation found: "<< endl;
+    found->display();
+    return true;
+ }
+
+ //Prints every active reservations belonging to that student
+ 
+ int ReservationManager::searchReservationsByStudent(int studentId){
+    cout << "\nReservations for student " << studentId <<":" << endl;
+
+    //call a function and store that number in matches, (eg, matches = 8)
+    int matches = activeReservations.displayByStudentId(studentId);
+
+    //if nothing match is found
+    if (matches == 0){
+        cout << "No active reservations found for student " << studentId <<"." << endl;
+
+    }
+
+    return matches;
+ }
+
+ //finds one resource by its ID and prints it.
+ bool ReservationManager::searchResourceById(const string& resourceId){
+
+    //calling another function and let a pointer called found point to it
+    Resource*found = findResource(resourceId);
+
+    //if found is empty, return false
+    if (found == nullptr){
+        cout << "No resource with ID " << resourceId <<"."<<endl;
+        return false;
+    }
+
+    //if not display that found item and return true
+    cout << "\nResource found:" << endl;
+    found->display();
+    return true;
+ }

@@ -128,27 +128,27 @@ while (current != nullptr) {
 return nullptr;
 }
 
-// ================================================
-// Find By Student ID and Resource ID
-// Same idea as findById, but checks two things on each node
-// inside of one, so we can catch a student double-booking the same reasource.
-// ================================================
-Reservation* ReservationList::findByStudentAndResource(int studentId, string resourceId) {
-    Node* current = head;   // Declare head as current
+// // ================================================
+// // Find By Student ID and Resource ID
+// // Same idea as findById, but checks two things on each node
+// // inside of one, so we can catch a student double-booking the same reasource.
+// // ================================================
+// Reservation* ReservationList::findByStudentAndResource(int studentId, string resourceId) {
+//     Node* current = head;   // Declare head as current
 
-    while (current != nullptr) {
+//     while (current != nullptr) {
 
-        // If the current student AND resource match what we're looking for
-        if(current->data.getStudentId() == studentId && current->data.getResourceId() == resourceId) {
+//         // If the current student AND resource match what we're looking for
+//         if(current->data.getStudentId() == studentId && current->data.getResourceId() == resourceId) {
             
-            // We will return that Node data
-            return &(current->data);
-        }
-        // Move forward to check
-        current = current->next;
-    }
-    return nullptr;
-}
+//             // We will return that Node data
+//             return &(current->data);
+//         }
+//         // Move forward to check
+//         current = current->next;
+//     }
+//     return nullptr;
+// }
 
 // ================================================
 // Display All
@@ -188,4 +188,57 @@ bool ReservationList::isEmpty() {
 // ================================================
 int ReservationList::getCount() {
     return count;
+}
+
+// ================================================
+// Count By Resource ID
+// Counts how many active reservations belong
+// to a specific resource
+// ================================================
+int ReservationList::countByResourceId(const string& resourceId) {
+
+    int resourceCount = 0;
+
+    // Start at the first reservation
+    Node* current = head;
+
+    // Go through every reservation in the linked list
+    while (current != nullptr) {
+
+        // Check if this reservation uses the resource
+        if (current->data.getResourceId() == resourceId) {
+            resourceCount++;
+        }
+
+        // Move to the next reservation
+        current = current->next;
+    }
+
+    return resourceCount;
+}
+
+/**
+ * Display by student ID (linear search)
+ * A student can hold several reservations, so unlike findbyID
+ * this cannot stop at the first match, it walk the whole list, print
+ * every reservation whose student ID matches, and 
+ * return how many it found
+ * 
+ * */
+int ReservationList:: displayByStudentId(int studentId){
+
+    int matches = 0; //where we will count the matches (counter)
+    Node* current = head; // we create a pointer call current and make it point to the head node
+
+    //As long as our pointer does not point the end nullptr
+    while (current != nullptr) {
+        if (current->data.getStudentId() == studentId){ //if current student id is the same as student id
+            current->data.display(); // display that current student id
+            matches++; //increment the counter
+        }
+
+        current = current->next; // move to the second node
+    }
+    return matches;
+    
 }

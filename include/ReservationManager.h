@@ -63,6 +63,34 @@ public:
 
     bool restoreLastCancellation();// restores the most recently cancelled reservation and returns true if a cancelled reservation was successfully restored and returns false if there is nothing to restore 
     void displayCancellationHistory();// displays the history of cancelled reservations.
+    // displays all active reservations in the report
+    void reportActiveReservations();
+
+    // displays each resource and the number of reservations
+    // associated with that resource
+    void reportResourceUtilization();
+
+    // displays the resource or resources with the most reservations
+    void reportMostRequestedResources();
+
+    // displays the number of students waiting for each resource
+    void reportWaitingListStatistics();
+
+    // displays all four reports together
+    void generateReport();
+
+    // Searching (Linear search)
+    //Blue print for finding reservation by its ID and prints out
+    bool searchReservationById(int reservationId);
+
+    //Print every active reservation belonging to a student
+    int searchReservationsByStudent(int studentId);
+
+    //Finds one reseource by its ID and prints it
+    bool searchResourceById(const string& resourceId);
 };
+
+    
+
 
 #endif

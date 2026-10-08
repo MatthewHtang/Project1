@@ -27,8 +27,15 @@ class ReservationList {
   Reservation* findById(int reservationId);   //This function searches the linked list for a reservation
   Reservation* FindByStudentId(int studentId);   //This function searches the linked list for a reservation by student ID
   Reservation* FindByResourceId(string resourceId);   //This function searches the linked list
+
   void displayAll();    //This function will print every reservation
   bool isEmpty();   //This checks whether the list has anything inside it
   int getCount();   //  To get the number of reservation
+
+  // Counts how many active reservations belong to a specific resource
+  int countByResourceId(const string& resourceId);
+
+  //Linear search: prints every match, return how many
+  int displayByStudentId(int studentId);
 };
 #endif
