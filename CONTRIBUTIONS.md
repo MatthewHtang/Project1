@@ -60,6 +60,8 @@
 
 - **10-07-2026** — Solved Merge Conflict and add search functionality.[`e090339`](https://github.com/MatthewHtang/Reservation_System/commit/e090339f6aa553986b058b30f7724e062fb18520)
 
+- **10-11-2026** — Add resource reporting functions and update search method/ Bug Fixed[`134c9fd`](https://github.com/MatthewHtang/Reservation_System/commit/134c9fdcd988273b6a250d4d35077e0faf333afc)
+
 ---
 
 
