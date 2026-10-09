@@ -19,6 +19,15 @@ Queue is used for creating waiting list system. It has three major function: deq
 - CancellationHistory (Stacked)
 The big O notation for the cancellation history is 0(1). Since it's a stack, we only need one single pointer, which is the top (LIFO). Imagine a student cancel a reservation, the boss put that reservaiton his desk. If the boss needed to hack back that cancellation, he doesn't need to go all the way down, it's alwaying sitting on the top, so he just grab it. First, he slaps it on his desk (push), he grab it off the table (pop). The boss has to access the top one on the stack no matter what. That's why big O notation for this stack is 0(1).
 
+- Searching (Linear)
+We implemented linear search for this system and since our list is not sorted, linear search is not an option.
+
+ReservationList
+In this reservation linked list, the linear search check each and every element one at
+a time from the start to the end. The best case for this is O(1), assuming the element
+we are looking for is in the first element, and worst case is O(n), since it must check
+and visit every node.
+
 # Alka's Complexity Breakdown
 
 * Reservation (Data Class)
