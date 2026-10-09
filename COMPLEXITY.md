@@ -22,11 +22,10 @@ The big O notation for the cancellation history is 0(1). Since it's a stack, we 
 - Searching (Linear)<br>
 We implemented linear search for this system and since our list is not sorted, linear search is not an option.<br>
 
-- ReservationList<br>
-In this reservation linked list, the linear search check each and every element one at
-a time from the start to the end. The best case for this is O(1), assuming the element
-we are looking for is in the first element, and worst case is O(n), since it must check
-and visit every node.
+    ReservationList<br>
+    In this reservation linked list, the linear search check each and every element one at
+    a time from the start to the end. The best case for this is O(1), assuming the element
+    we are looking for is in the first element, and worst case is O(n), since it must check and visit every node.
 
 # Alka's Complexity Breakdown
 
