@@ -183,3 +183,8 @@ void ResourceManager::merge(int left, int mid, int right) {
         k++;
     }
 }
+
+// Hands back the whole vector of resources so other classes can read them.
+const vector<Resource>& ResourceManager::getResources() {
+    return resources;
+}

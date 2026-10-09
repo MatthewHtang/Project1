@@ -31,6 +31,7 @@ public:
     void sortByName();                  // sorts all the resources A to Z by name, using merge sort.
     
     int getCount();                     // returns the number of resources are loaded right now.
+    const vector<Resource>& getResources();   // hands back the whole resource vector so reports can loop over it
     bool isEmpty();                     // True if we haven't loaded any resources yet.
 };
 

@@ -249,6 +249,161 @@ void ReservationManager::displayCancellationHistory() {
     cancellationHistory.displayAll();
 }
 
+
+// Displays all active reservations for the system report
+void ReservationManager::reportActiveReservations() {
+    cout << "\n===== ACTIVE RESERVATIONS =====" << endl;
+
+    displayActiveReservations();
+}
+
+// Displays how many active reservations are using each resource
+void ReservationManager::reportResourceUtilization() {
+
+    cout << "\n===== RESOURCE UTILIZATION =====" << endl;
+
+    // Get all resources from ResourceManager
+    const vector<Resource>& allResources = resources.getResources();
+
+    // Check if there are any resources
+    if (allResources.empty()) {
+        cout << "No resources loaded." << endl;
+        return;
+    }
+
+    // Go through every resource
+    for (const Resource& resource : allResources) {
+
+        string resourceId = resource.getResourceId();
+
+        // Count how many active reservations use this resource
+        int reservationCount =
+            activeReservations.countByResourceId(resourceId);
+
+        cout << resourceId << " - "
+             << resource.getResourceName()
+             << ": " << reservationCount
+             << " reservation(s)" << endl;
+    }
+}
+// Displays how many students are waiting for each resource
+void ReservationManager::reportWaitingListStatistics() {
+cout << "\n===== WAITING LIST STATISTICS =====" << endl;
+
+    // Get all resources
+    const vector<Resource>& allResources = resources.getResources();
+
+    // Check if there are any resources
+    if (allResources.empty()) {
+        cout << "No resources loaded." << endl;
+        return;
+    }
+
+    // Go through every resource
+    for (const Resource& resource : allResources) {
+
+        string resourceId = resource.getResourceId();
+
+        // Start the waiting count at 0
+        int waitingCount = 0;
+
+        // Check if this resource has a waiting list
+        if (waitLists.find(resourceId) != waitLists.end()) {
+            waitingCount = waitLists[resourceId].getCount();
+        }
+
+        // Display the result
+        cout << resourceId << " - "
+             << resource.getResourceName()
+             << ": " << waitingCount
+             << " student(s) waiting" << endl;
+    }
+}
+
+// Displays the resource or resources with the most current requests
+void ReservationManager::reportMostRequestedResources() {
+
+    cout << "\n===== MOST REQUESTED RESOURCES =====" << endl;
+
+    // Get all resources
+    const vector<Resource>& allResources = resources.getResources();
+
+    // Check if there are any resources
+    if (allResources.empty()) {
+        cout << "No resources loaded." << endl;
+        return;
+    }
+
+    int highestRequests = 0;
+
+    // Find the highest number of requests
+    for (const Resource& resource : allResources) {
+
+        string resourceId = resource.getResourceId();
+
+        // Count active reservations
+        int activeCount =
+            activeReservations.countByResourceId(resourceId);
+
+        // Count students waiting
+        int waitingCount = 0;
+
+        if (waitLists.find(resourceId) != waitLists.end()) {
+            waitingCount = waitLists[resourceId].getCount();
+        }
+
+        // Add active and waiting requests
+        int totalRequests = activeCount + waitingCount;
+
+        if (totalRequests > highestRequests) {
+            highestRequests = totalRequests;
+        }
+    }
+
+    // Display the resource(s) with the highest number of requests
+    for (const Resource& resource : allResources) {
+
+        string resourceId = resource.getResourceId();
+
+        int activeCount =
+            activeReservations.countByResourceId(resourceId);
+
+        int waitingCount = 0;
+
+        if (waitLists.find(resourceId) != waitLists.end()) {
+            waitingCount = waitLists[resourceId].getCount();
+        }
+
+        int totalRequests = activeCount + waitingCount;
+
+        if (totalRequests == highestRequests) {
+            cout << resourceId << " - "
+                 << resource.getResourceName()
+                 << ": " << totalRequests
+                 << " request(s)" << endl;
+        }
+    }
+}
+
+// Generates the complete system report
+void ReservationManager::generateReport() {
+
+    cout << "\n====================================" << endl;
+    cout << "      RESERVATION SYSTEM REPORT     " << endl;
+    cout << "====================================" << endl;
+
+    // Display all parts of the report
+    reportActiveReservations();
+    reportResourceUtilization();
+    reportMostRequestedResources();
+    reportWaitingListStatistics();
+
+    cout << "\n====================================" << endl;
+    cout << "           END OF REPORT            " << endl;
+    cout << "====================================" << endl;
+}
+
+
 /**
  * SEARCHING
  * All three use the linear search, walk the structure from the start

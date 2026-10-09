@@ -154,7 +154,7 @@ int main() {
                 cin >>studentId;
 
                 clearInputPipe();
-                reservationManager.searchReservationById(studentId);
+                reservationManager.searchReservationsByStudent(studentId);
             }
             else if (searchChoice == 3){
                 string resourceId;
@@ -167,6 +167,7 @@ int main() {
             else {
                 cout << "Invalid choice. Please enter a valid number." << endl;
             }
+            break;
 
 
             case 7:
